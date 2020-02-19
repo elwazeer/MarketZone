@@ -1,0 +1,63 @@
+CREATE TABLE users (
+    UID varchar(255) NOT NULL,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Phone text,
+    Email varchar(255),
+    Password varchar(255),
+    PRIMARY KEY (UID),
+    type boolean,
+    Address varchar(255)
+);
+
+
+
+CREATE TABLE product (
+
+    PID int NOT NULL AUTO_INCREMENT,
+    Name varchar(255),
+    Category varchar(255),
+    Brand varchar(255),
+    Price decimal,
+	img varchar(255),
+    PRIMARY KEY (PID)
+);
+
+
+
+
+
+
+CREATE TABLE orders (
+    ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    OrderId int AUTO_INCREMENT,
+    UID varchar(255),
+    StreetAdd varchar(255),
+    PaymentMethod boolean,
+    Status int,
+    FOREIGN KEY (UID) REFERENCES users(UID),
+    PRIMARY KEY (OrderId)
+);
+
+
+CREATE TABLE cart (
+       
+        UID varchar(255),
+        PID int,
+        Quantity int,
+	OrderId int,
+        FOREIGN KEY (PID) REFERENCES product(PID),
+        FOREIGN KEY (UID) REFERENCES users(UID),
+	FOREIGN KEY (OrderID) REFERENCES orders(OrderId),
+        PRIMARY KEY (OrderId, UID, PID)
+
+);
+
+CREATE TABLE notifications(
+	NID int NOT NULL AUTO_INCREMENT,
+	Msg varchar(255),
+	UID varchar(255),
+	FOREIGN KEY (UID) REFERENCES users(UID),
+	PRIMARY KEY (NID)
+);
+

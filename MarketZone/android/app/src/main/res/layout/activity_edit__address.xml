@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.settings.edit_Address">
+
+
+    <TextView
+        android:id="@+id/update_addr"
+        android:layout_width="308dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_vertical"
+        android:text="Enter your updated address"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/newaddr_disp"
+        android:layout_width="305dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_addr" />
+
+    <Button
+        android:id="@+id/address_submit_btn"
+        style="@android:style/Widget.Holo.Button.Toggle"
+        android:layout_width="94dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="283dp"
+        android:layout_marginTop="357dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="121dp"
+        android:background="@color/colorPrimary"
+        android:onClick="submitbuttonhandler"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newaddr_disp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

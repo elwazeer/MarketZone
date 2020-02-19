@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".order_details">
+
+
+    <ListView
+        android:id="@+id/product_list_admin"
+        android:layout_width="368dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="210dp"
+        android:listSelector="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/admin_notify"
+        style="@android:style/Widget.Holo.Light.Button"
+        android:layout_width="129dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="68dp"
+        android:onClick="AdminClickHandler"
+        android:text="Send Notification"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/delivered_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/delivered_btn"
+        style="@android:style/Widget.Holo.Light.Button"
+        android:layout_width="129dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="68dp"
+        android:onClick="AdminClickHandler"
+        android:text="Delivered"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cancelled_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/admin_notify" />
+
+    <Button
+        android:id="@+id/cancelled_btn"
+        style="@android:style/Widget.Holo.Light.Button"
+        android:layout_width="129dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="68dp"
+        android:onClick="AdminClickHandler"
+        android:text="Cancelled"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/delivered_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

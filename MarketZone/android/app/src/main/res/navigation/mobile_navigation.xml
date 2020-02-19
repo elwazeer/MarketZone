@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.marketzone.app.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_offers"
+        android:name="com.marketzone.app.ui.offers.offersFragment"
+        android:label="@string/menu_offers"
+        tools:layout="@layout/fragment_menuoffers" />
+
+    <fragment
+        android:id="@+id/nav_myOrders"
+        android:name="com.marketzone.app.ui.orders.ordersFragment"
+        android:label="@string/menu_myOrders"
+        tools:layout="@layout/fragment_myorders" />
+
+    <fragment
+        android:id="@+id/nav_notifications"
+        android:name="com.marketzone.app.ui.notify.notifyFragment"
+        android:label="@string/menu_notifications"
+        tools:layout="@layout/fragment_notify" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.marketzone.app.ui.settings.settingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.marketzone.app.ui.about.aboutFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.marketzone.app.ui.logout.logoutFragment"
+        android:label="@string/menu_logout"
+        tools:layout="@layout/fragment_logout" />
+
+    <fragment
+        android:id="@+id/nav_contact"
+        android:name="com.marketzone.app.ui.contact.contactFragment"
+        android:label="Contact Us"
+        tools:layout="@layout/fragment_contact" />
+
+</navigation>

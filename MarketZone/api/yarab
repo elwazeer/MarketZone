@@ -1,0 +1,34 @@
+INSERT INTO users(UID,LastName, FirstName, Phone, Email, Password, type) VALUES("seifshalan" , "Shalan", "Seif", "01008856723", "shalan@aucegypt.edu", "password", false);
+INSERT INTO users(UID, LastName, FirstName, Phone, Email, Password, type) VALUES("alyhesham", "Hesham", "Aly", "01078329483", "aly.hesham98@aucegypt.edu", "password", true);
+
+INSERT INTO product(Name,Category,Brand,Price,img) VALUES("Pepsi", "Beverages", "Pepsico", 5, "https://pepsico-stage.pepext.com/images/album/product-information/240_pepsi_12oz.png?sfvrsn=9602ed47_0");
+INSERT INTO product(Name,Category,Brand,Price,img) VALUES("Chipsy", "Snacks", "Pepsico", 3.5, "http://peacecakeproductions.com/uploads/creative/4844672816295.png");
+INSERT INTO product(Name,Category,Brand,Price,img) VALUES("Chicken", "Dairy & Eggs", "Kooki", 20, "https://www.farmerseggs.com/images/egg.png");
+INSERT INTO product(Name,Category,Brand,Price,img) VALUES("Toast", "Bakery", "Rich Bake", 10, "http://richbake.com/wp-content/uploads/2016/10/Web-1.png");
+
+
+SET FOREIGN_KEY_CHECKS=0;
+INSERT INTO cart(UID, PID, Quantity, OrderId) VALUES("seifshalan", 3, 2, 0);
+SET FOREIGN_KEY_CHECKS=1;
+
+
+
+INSERT INTO orders(UID, StreetAdd, Status) values("seifshalan", "Gate 5 AUC", 0);
+
+
+INSERT INTO notifications(Msg, UID) values("test notification", "seifshalan");
+INSERT INTO notifications(Msg, UID) values("test notification 2", "seifshalan");
+
+
+
+
+
+
+
+
+SET FOREIGN_KEY_CHECKS=0;
+INSERT INTO cart(UID, PID, Quantity, OrderId) VALUES("seifshalan", 4, 5, 0);
+INSERT INTO cart(UID, PID, Quantity, OrderId) VALUES("alyhesham", 1, 1, 0);
+INSERT INTO cart(UID, PID, Quantity, OrderId) VALUES("alyhesham", 3, 1, 0);
+
+SET FOREIGN_KEY_CHECKS=1;
